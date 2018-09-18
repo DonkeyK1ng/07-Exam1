@@ -2,8 +2,8 @@
 Exam 1, problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Yuanning Zuo.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -102,6 +102,30 @@ def problem3(point, length, delta, window):
     # TODO (continued):         and colors per the specified pattern.
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
+    #for k in range(9):
+
+    linevertical=rg.Line(rg.Point(point.x,point.y),rg.Point(point.x,point.y+200))
+    line=rg.Line(rg.Point(point.x,point.y),rg.Point(point.x+length,point.y))
+    line.thickness=3
+    linevertical.thickness=3
+    line.color='magenta'
+    line1=rg.Line(rg.Point(point.x,point.y+delta),rg.Point(point.x+length+20,point.y+delta))
+    line1.thickness=3
+    line1.color='cyan'
+    line2=rg.Line(rg.Point(point.x,point.y+2*delta),rg.Point(point.x+length+40,point.y+2*delta))
+    line2.attach_to(window)
+    line2.color='spring green'
+    line2.thickness=3
+    line3=rg.Line(rg.Point(point.x,point.y+4*delta),rg.Point(point.x+length+60,point.y+4*delta))
+    line3.color='magenta'
+    line3.thickness=3
+    line3.attach_to(window)
+    linevertical.attach_to(window)
+    line.attach_to(window)
+    line1.attach_to(window)
+    line2.attach_to(window)
+    line3.attach_to(window)
+    window.render()
 
 
 # ----------------------------------------------------------------------

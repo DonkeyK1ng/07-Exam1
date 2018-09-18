@@ -2,12 +2,14 @@
 Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Yuanning Zuo.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
+
 import math
+import rosegraphics as rg
 
 
 def main():
@@ -70,7 +72,7 @@ def sum_of_digits_of_sum_of_factors(n):
 
 
 ################################################################################
-# TODO: 3.  READ the green doc-string for the   number_of_factors   function
+# Done: 3.  READ the green doc-string for the   number_of_factors   function
 #    defined below.  You do NOT need to understand its implementation,
 #    just its specification (per the doc-string).
 #    You should  ** CALL **  that function as needed in implementing
@@ -102,8 +104,8 @@ def number_of_factors(n):
 
     return count
     ############################################################################
-    #  TODO (continued):  Students: Do NOT touch the above   number_of_factors
-    #  TODO (continued)   function; CALL it as appropriate in problem(s) below.
+    #  Done (continued):  Students: Do NOT touch the above   number_of_factors
+    #  Done (continued)   function; CALL it as appropriate in problem(s) below.
     ############################################################################
 
 
@@ -318,6 +320,14 @@ def problem2b(a, b, x):
     # TODO (continued):       (i.e., call) the   number_of_factors   function
     #                         that is DEFINED ABOVE.
     ############################################################################
+    count=0
+    s=number_of_factors()
+
+    for k in range((b-a)+1):
+        if(number_of_factors(2*k)==True):
+            return sum_of_digits_of_sum_of_factors(count)
+
+
 
 
 def run_test_problem2c():
